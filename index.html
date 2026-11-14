@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ASTI U9 Maluku Utara</title>
+  <meta name="description" content="Website resmi Akademi Sepakbola ASTI U9 Maluku Utara: jadwal pertandingan, profil pemain, galeri, dan prestasi.">
+  <meta name="theme-color" content="#CF85B9">
+  <meta property="og:title" content="ASTI U9 Maluku Utara">
+  <meta property="og:description" content="Website resmi Akademi Sepakbola ASTI U9 Maluku Utara.">
+  <meta property="og:image" content="assets/logo-asti.png">
+  <link rel="icon" type="image/png" href="assets/logo-asti.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      var pref = 'sistem';
+      try { pref = localStorage.getItem('astiTema') || 'sistem'; } catch (e) { pref = 'sistem'; }
+      var gelap = pref === 'gelap' || (pref === 'sistem' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.setAttribute('data-tema', gelap ? 'gelap' : 'terang');
+      document.documentElement.setAttribute('data-pref-tema', pref);
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== BLOK: IKON ===== -->
+<svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-user-circle" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 4.2a3.4 3.4 0 1 1 0 6.8 3.4 3.4 0 0 1 0-6.8Zm0 13.6a7.9 7.9 0 0 1-5.9-2.7c.9-1.9 3.2-3 5.9-3s5 1.1 5.9 3a7.9 7.9 0 0 1-5.9 2.7Z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm0 2c-4.4 0-8 2.2-8 5v2h16v-2c0-2.8-3.6-5-8-5Z"/></symbol>
+  <symbol id="i-kiri" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-kanan" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-matahari" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+  <symbol id="i-bulan" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></g></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m7 10 5 5 5-5"/></symbol>
+  <symbol id="i-bawah" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-panah-serong" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-panah-kanan" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-kalender" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4m8-4v4"/></g></symbol>
+  <symbol id="i-album" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="7" width="14" height="14" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v12"/><circle cx="8.5" cy="12" r="1.5"/><path d="m3 19 5-5 4 4 2-2 3 3"/></g></symbol>
+  <symbol id="i-kamera" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></g></symbol>
+  <symbol id="i-putar" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.9l10.4-6.5a1 1 0 0 0 0-1.8L9.5 4.6A1 1 0 0 0 8 5.5Z"/></symbol>
+  <symbol id="i-surat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+  <symbol id="i-telepon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-lokasi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-kirim" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+  <symbol id="i-gembok" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></g></symbol>
+  <symbol id="i-perisai" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6z"/></symbol>
+  <symbol id="i-mata" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></g></symbol>
+  <symbol id="i-mata-tutup" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.6-7 10-7c2 0 3.7.7 5.1 1.6M22 12s-3.6 7-10 7c-2 0-3.7-.7-5.1-1.6"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2M3 3l18 18"/></g></symbol>
+  <symbol id="i-segar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.6-4.5L4 8"/><path d="M4 3v5h5M4 13a8 8 0 0 0 14.6 4.5L20 16"/><path d="M20 21v-5h-5"/></g></symbol>
+  <symbol id="i-masuk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5M15 12H3"/></g></symbol>
+  <symbol id="i-keluar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5M21 12H9"/></g></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-cari" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></g></symbol>
+  <symbol id="i-tambah" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-ubah" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4"/></symbol>
+  <symbol id="i-hapus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M10 11v6m4-6v6M6 7l1 13h10l1-13M9 7V4h6v3"/></symbol>
+  <symbol id="i-cek" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m5 12 5 5 9-10"/></symbol>
+  <symbol id="i-unggah" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 16V4m-5 5 5-5 5 5M4 20h16"/></symbol>
+  <symbol id="i-unduh" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m-5-5 5 5 5-5M4 20h16"/></symbol>
+  <symbol id="i-dokumen" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 2h8l5 5v15H6z"/><path d="M14 2v5h5M9 13h7M9 17h7"/></g></symbol>
+  <symbol id="i-beranda" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 11 12 3l9 8v10h-6v-6H9v6H3z"/></symbol>
+  <symbol id="i-grafik" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 20V10m6 10V4m6 16v-7m6 7H2"/></symbol>
+  <symbol id="i-gambar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m3 18 6-5 4 3 3-2 5 4"/></g></symbol>
+  <symbol id="i-tim" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.3 3.1-5.5 7-5.5s7 2.2 7 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c2.4.6 4 2.5 4 5.2"/></g></symbol>
+  <symbol id="i-bintang" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></symbol>
+  <symbol id="i-piala" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4a3 3 0 0 0 3 4m10-4h3a3 3 0 0 1-3 4M12 14v4m-4 3h8l-1-3H9z"/></g></symbol>
+  <symbol id="i-jabat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M2 12 6 8l4 2 3-2 5 1 4 3"/><path d="m6 8 7 8a1.5 1.5 0 0 0 2.2-2L12 11m-4 1 4 4m-6-2 3 3"/></g></symbol>
+  <symbol id="i-kotak-masuk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 13 6 4h12l3 9v7H3z"/><path d="M3 13h5l1 3h6l1-3h5"/></g></symbol>
+  <symbol id="i-gerigi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></g></symbol>
+  <symbol id="i-kunci-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-3.9 3.1-6.5 7-6.5 1.3 0 2.5.3 3.5.8"/><circle cx="18" cy="17" r="2.5"/><path d="M18 12v2.5m0 5V22m4.3-7.5-2.1 1.2m-4.4 2.6-2.1 1.2m8.6 0-2.1-1.2m-4.4-2.6-2.1-1.2"/></g></symbol>
+  <symbol id="i-tautan" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></g></symbol>
+  <symbol id="i-jam" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-9.5v.5"/></g></symbol>
+  <symbol id="i-penanda" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M6 3h12v18l-6-4-6 4z"/></symbol>
+</svg>
+<!-- ===== AKHIR BLOK: IKON ===== -->
+
+
+<!-- ===== BLOK: LAYOUT ===== -->
+<div class="situs" id="situs">
+  <header class="situs-header" id="situs-header">
+    <div class="wadah header-isi">
+      <a class="header-logo" href="#beranda" data-hal="beranda" aria-label="Beranda ASTI U9">
+        <img class="aset-img" id="img-logo-header" data-aset="logoHeader" alt="Akademi Sepakbola Maluku Utara U9">
+      </a>
+      <nav class="header-nav" id="header-nav" aria-label="Navigasi utama">
+        <a class="nav-link" href="#beranda" data-hal="beranda">Beranda</a>
+        <a class="nav-link" href="#jadwal" data-hal="jadwal">Jadwal</a>
+        <a class="nav-link" href="#tim" data-hal="tim">Tim</a>
+        <a class="nav-link" href="#galeri" data-hal="galeri" data-tab="Photo">Galeri</a>
+        <a class="nav-link" href="#prestasi" data-hal="prestasi">Prestasi</a>
+        <a class="nav-link" href="#kontak" data-hal="kontak">Kontak Kami</a>
+      </nav>
+      <div class="header-kanan">
+        <button class="tombol-tema" type="button" data-tema-toggle aria-label="Ganti tema" title="Tema">
+          <svg class="ikon ikon-tema ikon-terang"><use href="#i-matahari"/></svg>
+          <svg class="ikon ikon-tema ikon-gelap"><use href="#i-bulan"/></svg>
+          <svg class="ikon ikon-tema ikon-sistem"><use href="#i-monitor"/></svg>
+        </button>
+        <a class="nav-link nav-login" href="#login" id="nav-login">
+          <span id="nav-login-teks">Login</span>
+          <svg class="ikon-user"><use href="#i-user-circle"/></svg>
+        </a>
+        <button class="header-burger" id="btn-burger" type="button" aria-label="Buka menu" aria-expanded="false">
+          <svg class="ikon"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="situs-utama" id="situs-utama">
+<!-- ===== AKHIR BLOK: LAYOUT ===== -->
+
+
+<!-- ===== BLOK: H1_BERANDA ===== -->
+    <section class="hal" id="hal-beranda" data-hal-id="beranda">
+      <div class="hero-slider" id="hero-slider">
+        <div class="hero-slides" id="hero-slides">
+          <div class="hero-slide hero-kosong aktif"><div class="wadah hero-konten"><p class="teks-memuat">Memuat...</p></div></div>
+        </div>
+        <button class="hero-panah hero-panah-kiri" id="hero-prev" type="button" aria-label="Slide sebelumnya"><svg class="ikon"><use href="#i-kiri"/></svg></button>
+        <button class="hero-panah hero-panah-kanan" id="hero-next" type="button" aria-label="Slide berikutnya"><svg class="ikon"><use href="#i-kanan"/></svg></button>
+      </div>
+
+      <section class="blok blok-abu">
+        <div class="wadah">
+          <h2 class="judul-section animasi-muncul">Jadwal Pertandingan</h2>
+          <div class="jadwal-carousel animasi-muncul">
+            <div class="jadwal-track" id="beranda-jadwal"><p class="teks-memuat">Memuat...</p></div>
+          </div>
+          <div class="carousel-nav carousel-nav-kanan">
+            <button class="bulat-kecil" id="jadwal-prev" type="button" aria-label="Jadwal sebelumnya"><svg class="ikon"><use href="#i-kiri"/></svg></button>
+            <button class="bulat-kecil" id="jadwal-next" type="button" aria-label="Jadwal berikutnya"><svg class="ikon"><use href="#i-kanan"/></svg></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="blok blok-putih" id="blok-sorotan">
+        <div class="wadah grid-sorotan">
+          <div class="totm animasi-muncul">
+            <h3 class="pita-judul">Team of the Match</h3>
+            <div class="totm-gambar" id="totm-gambar"><p class="teks-kosong">Belum ada data</p></div>
+          </div>
+          <div class="turnamen animasi-muncul">
+            <h3 class="pita-judul" id="turnamen-judul">Sorotan Pertandingan</h3>
+            <div class="penghargaan-grid" id="penghargaan-grid"><p class="teks-kosong">Belum ada data</p></div>
+            <div class="keterangan-nilai" id="keterangan-nilai" hidden>
+              <p class="keterangan-kepala"><svg class="ikon-kecil"><use href="#i-info"/></svg> Keterangan Penilaian</p>
+              <p class="keterangan-teks" id="keterangan-teks"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="blok blok-ungu">
+        <div class="wadah">
+          <div class="kepala-section animasi-muncul">
+            <h2 class="judul-section">Foto Galeri</h2>
+            <a class="tombol-pil" href="#galeri" data-hal="galeri" data-tab="Photo">View All Photo</a>
+          </div>
+          <div class="grid-3" id="beranda-foto"><p class="teks-memuat">Memuat...</p></div>
+
+          <div class="kepala-section kepala-jarak animasi-muncul">
+            <h2 class="judul-section">Video Galeri</h2>
+            <a class="tombol-pil" href="#galeri" data-hal="galeri" data-tab="Video">View All Video</a>
+          </div>
+          <div class="grid-3" id="beranda-video"><p class="teks-memuat">Memuat...</p></div>
+        </div>
+      </section>
+
+      <section class="blok blok-putih">
+        <div class="wadah">
+          <div class="kepala-section garis-bawah animasi-muncul">
+            <h2 class="judul-section">Tim Utama U9</h2>
+            <div class="carousel-nav">
+              <button class="bulat-kecil bulat-garis" id="tim-prev" type="button" aria-label="Pemain sebelumnya"><svg class="ikon"><use href="#i-kiri"/></svg></button>
+              <button class="bulat-kecil bulat-garis" id="tim-next" type="button" aria-label="Pemain berikutnya"><svg class="ikon"><use href="#i-kanan"/></svg></button>
+            </div>
+          </div>
+          <div class="tim-carousel" id="beranda-tim"><p class="teks-memuat">Memuat...</p></div>
+        </div>
+      </section>
+
+      <section class="blok blok-putih blok-sponsor">
+        <div class="wadah">
+          <p class="sponsor-judul animasi-muncul">Didukung Oleh</p>
+          <div class="sponsor-grid animasi-muncul" id="beranda-sponsor"></div>
+        </div>
+      </section>
+    </section>
+<!-- ===== AKHIR BLOK: H1_BERANDA ===== -->
+
+
+<!-- ===== BLOK: H2_JADWAL ===== -->
+    <section class="hal" id="hal-jadwal" data-hal-id="jadwal" hidden>
+      <div class="wadah halaman-isi">
+        <div class="jadwal-filter">
+          <div class="pilih-bulan" id="pilih-bulan">
+            <select class="pb-asli" id="filter-bulan" aria-hidden="true" tabindex="-1"><option value="">Pilih Bulan</option></select>
+            <button class="pb-tombol" id="pb-tombol" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="pb-daftar">
+              <span id="pb-label">Pilih Bulan</span>
+              <svg class="pilih-bulan-ikon" aria-hidden="true"><use href="#i-chevron"/></svg>
+            </button>
+            <ul class="pb-daftar" id="pb-daftar" role="listbox" aria-label="Pilih bulan" tabindex="-1" hidden></ul>
+          </div>
+        </div>
+        <div class="daftar-jadwal" id="daftar-jadwal"><p class="teks-memuat">Memuat...</p></div>
+      </div>
+    </section>
+<!-- ===== AKHIR BLOK: H2_JADWAL ===== -->
+
+
+<!-- ===== BLOK: H3_TIM ===== -->
+    <section class="hal" id="hal-tim" data-hal-id="tim" hidden>
+      <div class="wadah halaman-isi" id="daftar-tim"><p class="teks-memuat">Memuat...</p></div>
+    </section>
+<!-- ===== AKHIR BLOK: H3_TIM ===== -->
+
+
+<!-- ===== BLOK: H3_PROFIL_PEMAIN ===== -->
+    <section class="hal" id="hal-profil" data-hal-id="pemain" hidden>
+      <div class="profil-hero">
+        <div class="profil-cahaya" aria-hidden="true"></div>
+        <div class="wadah profil-hero-isi">
+          <div class="profil-teks">
+            <div class="profil-badge">
+              <span class="badge-pil" id="profil-posisi"></span>
+              <span class="badge-pil" id="profil-label"></span>
+            </div>
+            <h1 class="profil-nama" id="profil-nama"></h1>
+            <span class="badge-pil badge-nomor"><small>Squad Number</small> <b id="profil-nomor"></b></span>
+          </div>
+          <div class="profil-foto">
+            <img id="profil-foto" alt="" hidden>
+          </div>
+        </div>
+      </div>
+
+      <div class="wadah profil-isi">
+        <div class="profil-bio">
+          <div class="bio-item"><span class="bio-label">Place of Birth</span><strong class="bio-nilai" id="bio-tempat">-</strong></div>
+          <div class="bio-item"><span class="bio-label">Date of Birth</span><strong class="bio-nilai" id="bio-tanggal">-</strong></div>
+          <div class="bio-item"><span class="bio-label">Height</span><strong class="bio-nilai" id="bio-tinggi">-</strong></div>
+          <div class="bio-item"><span class="bio-label">Weight</span><strong class="bio-nilai" id="bio-berat">-</strong></div>
+        </div>
+
+        <div class="dokumen-grid" id="profil-dokumen"></div>
+
+        <a class="tautan-pena" id="profil-tautan" target="_blank" rel="noopener noreferrer">
+          <img class="aset-img pena-logo" id="img-pena" data-aset="logoPena" alt="Tautan profil pemain">
+          <span class="pena-nama" id="profil-tautan-nama"></span>
+        </a>
+      </div>
+    </section>
+<!-- ===== AKHIR BLOK: H3_PROFIL_PEMAIN ===== -->
+
+
+<!-- ===== BLOK: H4_GALERI ===== -->
+    <section class="hal" id="hal-galeri" data-hal-id="galeri" hidden>
+      <div class="wadah halaman-isi">
+        <div class="tab-galeri" role="tablist">
+          <button class="tab-link aktif" type="button" role="tab" data-tipe="Photo">Photo</button>
+          <button class="tab-link" type="button" role="tab" data-tipe="Video">Video</button>
+          <button class="tab-link" type="button" role="tab" data-tipe="Wallpaper">Wallpaper</button>
+        </div>
+        <div class="grid-3" id="galeri-grid"><p class="teks-memuat">Memuat...</p></div>
+        <div class="tengah">
+          <button class="tombol-merah tombol-muat" id="btn-muat-galeri" type="button" hidden>Muat Lebih Banyak</button>
+        </div>
+      </div>
+    </section>
+<!-- ===== AKHIR BLOK: H4_GALERI ===== -->
+
+
+<!-- ===== BLOK: H5_PRESTASI ===== -->
+    <section class="hal" id="hal-prestasi" data-hal-id="prestasi" hidden>
+      <div class="wadah halaman-isi">
+        <h2 class="judul-section judul-halaman">Prestasi ASTI U9 Maluku Utara</h2>
+        <div class="grid-3 grid-prestasi" id="prestasi-grid"><p class="teks-memuat">Memuat...</p></div>
+      </div>
+    </section>
+<!-- ===== AKHIR BLOK: H5_PRESTASI ===== -->
+
+
+<!-- ===== BLOK: H6_KONTAK ===== -->
+    <section class="hal" id="hal-kontak" data-hal-id="kontak" hidden>
+      <div class="wadah halaman-isi">
+        <h2 class="judul-section judul-halaman">Kontak Kami</h2>
+        <div class="kontak-grid">
+          <div class="kontak-kiri">
+            <div class="kontak-mini">
+              <span class="kontak-ikon"><svg class="ikon"><use href="#i-surat"/></svg></span>
+              <h4 class="kontak-label">Email</h4>
+              <p class="kontak-nilai" id="kontak-email">-</p>
+            </div>
+            <div class="kontak-mini">
+              <span class="kontak-ikon"><svg class="ikon"><use href="#i-telepon"/></svg></span>
+              <h4 class="kontak-label">Telepon</h4>
+              <p class="kontak-nilai" id="kontak-telepon">-</p>
+            </div>
+            <div class="kontak-markas">
+              <svg class="markas-ikon"><use href="#i-lokasi"/></svg>
+              <h3 class="markas-judul">Lokasi ASTI U9</h3>
+              <p class="markas-alamat" id="kontak-alamat">-</p>
+            </div>
+          </div>
+
+          <form class="kontak-form" id="form-kontak" novalidate>
+            <div class="form-2">
+              <label class="field"><span class="field-label">Nama Lengkap</span><input class="input" name="NamaLengkap" maxlength="100" placeholder="Masukkan nama lengkap Anda" required></label>
+              <label class="field"><span class="field-label">Alamat Email</span><input class="input" name="Email" type="email" maxlength="120" placeholder="Masukkan alamat email Anda" required></label>
+            </div>
+            <label class="field"><span class="field-label">Subjek</span><input class="input" name="Subjek" maxlength="150" placeholder="Apa perihal pesan Anda?" required></label>
+            <label class="field"><span class="field-label">Pesan</span><textarea class="input" name="Pesan" rows="5" maxlength="2000" placeholder="Tulis pesan Anda di sini..." required></textarea></label>
+            <div class="field kontak-captcha">
+              <span class="field-label">Verifikasi</span>
+              <div class="recaptcha-wadah" id="recaptcha-wadah" hidden></div>
+              <div class="captcha-bawaan" id="captcha-bawaan" hidden>
+                <div class="captcha-baris">
+                  <div class="captcha-gambar" id="kontak-captcha-gambar"></div>
+                  <button class="tombol-captcha" id="btn-kontak-captcha" type="button" aria-label="Muat ulang captcha"><svg class="ikon-kecil"><use href="#i-segar"/></svg></button>
+                </div>
+                <input class="input" id="kontak-captcha-kode" maxlength="5" autocomplete="off" placeholder="Masukkan kode CAPTCHA">
+              </div>
+            </div>
+            <button class="tombol-merah tombol-penuh" id="btn-kirim-pesan" type="submit">Kirim Pesan <svg class="ikon-kecil"><use href="#i-kirim"/></svg></button>
+          </form>
+        </div>
+      </div>
+    </section>
+<!-- ===== AKHIR BLOK: H6_KONTAK ===== -->
+
+
+<!-- ===== BLOK: LOGIN ===== -->
+    <section class="hal hal-login" id="hal-login" data-hal-id="login" hidden>
+      <div class="login-kartu">
+        <img class="aset-img login-logo" id="img-logo-login" data-aset="logoAsti" alt="Akademi Sepakbola ASTI Maluku Utara">
+        <h1 class="login-merek">ASTI ACADEMY</h1>
+        <p class="login-sub"><span>Akademi Sepakbola Maluku Utara</span></p>
+
+        <form class="login-form" id="form-login" novalidate>
+          <span class="login-avatar"><svg class="ikon"><use href="#i-user"/></svg></span>
+          <h2 class="login-judul">Login Pengguna</h2>
+          <p class="login-ket">Masuk ke sistem ASTI Academy</p>
+
+          <label class="login-field">
+            <span class="login-label"><svg class="ikon-kecil"><use href="#i-user"/></svg> Username</span>
+            <input class="login-input" id="login-username" autocomplete="username" maxlength="30" placeholder="Masukkan username">
+          </label>
+
+          <label class="login-field">
+            <span class="login-label"><svg class="ikon-kecil"><use href="#i-gembok"/></svg> Password</span>
+            <span class="input-ikon">
+              <input class="login-input" id="login-password" type="password" autocomplete="current-password" maxlength="100" placeholder="Masukkan password">
+              <button class="tombol-mata" id="btn-lihat-pw" type="button" aria-label="Tampilkan password"><svg class="ikon-kecil"><use href="#i-mata-tutup"/></svg></button>
+            </span>
+          </label>
+
+          <div class="login-field">
+            <span class="login-label"><svg class="ikon-kecil"><use href="#i-perisai"/></svg> Verifikasi Captcha</span>
+            <div class="captcha-baris">
+              <div class="captcha-gambar" id="captcha-gambar"><span class="teks-memuat">Memuat...</span></div>
+              <button class="tombol-captcha" id="btn-captcha" type="button" aria-label="Muat ulang captcha"><svg class="ikon-kecil"><use href="#i-segar"/></svg></button>
+            </div>
+            <input class="login-input" id="login-captcha" maxlength="5" autocomplete="off" placeholder="Masukkan kode captcha">
+          </div>
+
+          <button class="login-tombol" id="btn-login" type="submit"><svg class="ikon"><use href="#i-masuk"/></svg> Login</button>
+          <div class="login-lupa"><button class="tautan-teks" id="btn-lupa" type="button">Lupa Password?</button></div>
+          <p class="login-info" id="login-info" hidden>Hubungi Admin ASTI U9 untuk mereset password Anda.</p>
+        </form>
+
+        <svg class="login-ombak" viewBox="0 0 400 90" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 40 C 90 10, 170 70, 260 40 S 360 20, 400 34 V90 H0Z" fill="rgba(176,140,200,.42)"/>
+          <path d="M0 60 C 110 30, 200 85, 290 55 S 370 45, 400 58 V90 H0Z" fill="rgba(154,120,180,.5)"/>
+        </svg>
+      </div>
+    </section>
+<!-- ===== AKHIR BLOK: LOGIN ===== -->
+
+  </main>
+
+  <footer class="situs-footer" id="situs-footer">
+    <div class="wadah footer-isi">
+      <div class="footer-kol">
+        <h4 class="footer-judul">Email</h4>
+        <a class="footer-email" id="footer-email"></a>
+      </div>
+      <img class="aset-img footer-logo" id="img-logo-footer" data-aset="logoPutih" alt="ASTI Academy">
+      <div class="footer-kol">
+        <h4 class="footer-judul">Media Sosial</h4>
+        <div class="footer-sosmed">
+          <a class="sosmed" id="sos-fb" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img class="aset-img" data-aset="ikonFb" alt="Facebook"></a>
+          <a class="sosmed" id="sos-ig" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img class="aset-img" data-aset="ikonIg" alt="Instagram"></a>
+          <a class="sosmed" id="sos-tiktok" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><img class="aset-img" data-aset="ikonTiktok" alt="TikTok"></a>
+          <a class="sosmed" id="sos-yt" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img class="aset-img" data-aset="ikonYt" alt="YouTube"></a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-copy" id="footer-copy"></p>
+  </footer>
+</div>
+
+
+<!-- ===== BLOK: ADMIN_LAYOUT ===== -->
+<div class="admin" id="area-admin" hidden>
+  <aside class="admin-sidebar" id="admin-sidebar">
+    <a class="admin-logo" href="#beranda" aria-label="Kembali ke website">
+      <img class="aset-img" data-aset="logoHeader" alt="ASTI U9">
+    </a>
+    <nav class="admin-nav" id="admin-nav" aria-label="Menu administrator">
+      <a class="admin-link" href="#admin/m1" data-menu="m1" id="nav-m1"><svg class="ikon"><use href="#i-grafik"/></svg><span>Dashboard</span></a>
+      <a class="admin-link" href="#admin/m2" data-menu="m2" id="nav-m2" data-role="Admin"><svg class="ikon"><use href="#i-gambar"/></svg><span>Slider Berita</span></a>
+      <a class="admin-link" href="#admin/m3" data-menu="m3" id="nav-m3" data-role="Admin"><svg class="ikon"><use href="#i-kalender"/></svg><span>Jadwal</span></a>
+      <a class="admin-link" href="#admin/m4" data-menu="m4" id="nav-m4"><svg class="ikon"><use href="#i-tim"/></svg><span>Pemain</span></a>
+      <a class="admin-link" href="#admin/m5" data-menu="m5" id="nav-m5"><svg class="ikon"><use href="#i-dokumen"/></svg><span>Dokumen Pemain</span></a>
+      <a class="admin-link" href="#admin/m6" data-menu="m6" id="nav-m6" data-role="Admin"><svg class="ikon"><use href="#i-bintang"/></svg><span>Sorotan</span></a>
+      <a class="admin-link" href="#admin/m7" data-menu="m7" id="nav-m7" data-role="Admin"><svg class="ikon"><use href="#i-kamera"/></svg><span>Galeri</span></a>
+      <a class="admin-link" href="#admin/m8" data-menu="m8" id="nav-m8" data-role="Admin"><svg class="ikon"><use href="#i-piala"/></svg><span>Prestasi</span></a>
+      <a class="admin-link" href="#admin/m9" data-menu="m9" id="nav-m9" data-role="Admin"><svg class="ikon"><use href="#i-jabat"/></svg><span>Sponsor</span></a>
+      <a class="admin-link" href="#admin/m10" data-menu="m10" id="nav-m10" data-role="Admin"><svg class="ikon"><use href="#i-kotak-masuk"/></svg><span>Pesan Kontak</span></a>
+      <a class="admin-link" href="#admin/m11" data-menu="m11" id="nav-m11" data-role="Admin"><svg class="ikon"><use href="#i-gerigi"/></svg><span>Pengaturan</span></a>
+      <a class="admin-link" href="#admin/m12" data-menu="m12" id="nav-m12" data-role="Admin"><svg class="ikon"><use href="#i-kunci-user"/></svg><span>Pengguna</span></a>
+    </nav>
+    <div class="admin-akun">
+      <span class="admin-akun-nama" id="admin-nama"></span>
+      <span class="badge-pil badge-role" id="admin-role"></span>
+      <button class="tombol-garis tombol-kecil" id="btn-ganti-pw" type="button">Ganti Password</button>
+      <button class="tombol-garis tombol-kecil" id="btn-logout" type="button"><svg class="ikon-kecil"><use href="#i-keluar"/></svg> Keluar</button>
+    </div>
+  </aside>
+
+  <div class="admin-utama">
+    <header class="admin-topbar">
+      <h1 class="admin-judul" id="admin-judul">Dashboard</h1>
+      <div class="admin-topbar-aksi">
+        <button class="tombol-tema" type="button" data-tema-toggle aria-label="Ganti tema" title="Tema">
+          <svg class="ikon ikon-tema ikon-terang"><use href="#i-matahari"/></svg>
+          <svg class="ikon ikon-tema ikon-gelap"><use href="#i-bulan"/></svg>
+          <svg class="ikon ikon-tema ikon-sistem"><use href="#i-monitor"/></svg>
+        </button>
+        <a class="tombol-garis tombol-kecil" href="#beranda"><svg class="ikon-kecil"><use href="#i-beranda"/></svg> Lihat Website</a>
+        <button class="tombol-ikon admin-keluar-hp" id="btn-logout-hp" type="button" aria-label="Keluar"><svg class="ikon"><use href="#i-keluar"/></svg></button>
+      </div>
+    </header>
+    <div class="admin-isi">
+<!-- ===== AKHIR BLOK: ADMIN_LAYOUT ===== -->
+
+
+<!-- ===== BLOK: M1_DASHBOARD ===== -->
+      <section class="menu" id="m1" data-judul="Dashboard">
+        <div class="kepala-menu">
+          <h2 class="judul-section">Ringkasan Akademi</h2>
+          <button class="tombol-garis tombol-kecil" type="button" data-muat="m1"><svg class="ikon-kecil"><use href="#i-segar"/></svg> Muat ulang</button>
+        </div>
+        <div class="grid-kartu-angka">
+          <div class="kartu-angka"><span class="kartu-angka-ikon"><svg class="ikon"><use href="#i-tim"/></svg></span><span class="kartu-angka-label">Pemain Aktif</span><strong class="kartu-angka-nilai" id="d-pemain">–</strong></div>
+          <div class="kartu-angka"><span class="kartu-angka-ikon"><svg class="ikon"><use href="#i-kalender"/></svg></span><span class="kartu-angka-label">Jadwal Mendatang</span><strong class="kartu-angka-nilai" id="d-jadwal">–</strong></div>
+          <div class="kartu-angka"><span class="kartu-angka-ikon"><svg class="ikon"><use href="#i-dokumen"/></svg></span><span class="kartu-angka-label">Dokumen Belum Diverifikasi</span><strong class="kartu-angka-nilai" id="d-dokumen">–</strong></div>
+          <div class="kartu-angka"><span class="kartu-angka-ikon"><svg class="ikon"><use href="#i-kotak-masuk"/></svg></span><span class="kartu-angka-label">Pesan Kontak Baru</span><strong class="kartu-angka-nilai" id="d-pesan">–</strong></div>
+        </div>
+        <div class="grid-2">
+          <div class="kartu-panel"><h3 class="panel-judul">Pemain per Posisi</h3><div class="grafik-wadah"><canvas id="grafik-posisi" aria-label="Grafik pemain per posisi"></canvas></div></div>
+          <div class="kartu-panel"><h3 class="panel-judul">Status Verifikasi Dokumen</h3><div class="grafik-wadah"><canvas id="grafik-dokumen" aria-label="Grafik status dokumen"></canvas></div></div>
+        </div>
+        <div class="grid-3-panel">
+          <div class="kartu-panel"><h3 class="panel-judul">Dokumen Belum Lengkap <span class="badge-jumlah" id="d-belum-total">0</span></h3><ul class="daftar-ringkas" id="d-belum"></ul></div>
+          <div class="kartu-panel"><h3 class="panel-judul">Tanpa Link Profil <span class="badge-jumlah" id="d-tanpalink-total">0</span></h3><ul class="daftar-ringkas" id="d-tanpalink"></ul></div>
+          <div class="kartu-panel"><h3 class="panel-judul">Jadwal Terdekat</h3><ul class="daftar-ringkas" id="d-jadwal-dekat"></ul></div>
+        </div>
+      </section>
+<!-- ===== AKHIR BLOK: M1_DASHBOARD ===== -->
+
+
+<!-- ===== BLOK: M2_SLIDER_BERITA ===== -->
+      <section class="menu" id="m2" data-judul="Slider Berita" hidden>
+        <div class="kepala-menu">
+          <h2 class="judul-section">Slider Berita</h2>
+          <div class="aksi-menu">
+            <button class="tombol-garis tombol-kecil" type="button" data-muat="m2"><svg class="ikon-kecil"><use href="#i-segar"/></svg> Muat ulang</button>
+            <button class="tombol-utama" type="button" data-form="slider" id="btn-tambah-slider"><svg class="ikon-kecil"><use href="#i-tambah"/></svg> Tambah Slide</button>
+          </div>
+        </div>
+        <div class="tabel-wadah">
+          <table class="tabel">
+            <thead><tr><th>Gambar</th><th>Label</th><th>Judul</th><th>Urutan</th><th>Aktif</th><th class="kolom-aksi">Aksi</th></tr></thead>
+            <tbody id="tabel-m2"></tbody>
+          </table>
+        </div>
+      </section>
+<!-- ===== AKHIR BLOK: M2_SLIDER_BERITA ===== -->
+
+
+<!-- ===== BLOK: M3_JADWAL ===== -->
+      <section class="menu" id="m3" data-judul="Manajemen Jadwal" hidden>
+        <div class="kepala-menu">
+          <h2 class="judul-section">Jadwal Pertandingan</h2>
+          <div class="aksi-menu">
+            <button class="tombol-garis tombol-kecil" type="button" data-muat="m3"><svg class="ikon-kecil"><use href="#i-segar"/></svg> Muat ulang</button>
+            <button class="tombol-utama" type="button" data-form="jadwal" id="btn-tambah-jadwal"><svg class="ikon-kecil"><use href="#i-tambah"/></svg> Tambah Jadwal</button>
+          </div>
+        </div>
+        <div class="alat-tabel">
+          <label class="cari"><svg class="ikon-kecil"><use href="#i-cari"/></svg><input id="cari-m3" placeholder="Cari nama turnamen..." aria-label="Cari jadwal"></label>
+          <select class="input input-filter" id="filter-m3-bulan" aria-label="Filter bulan"><option value="">Semua Bulan</option></select>
+          <select class="input input-filter" id="filter-m3-status" data-pilihan="StatusJadwal" data-semua="Semua Status" aria-label="Filter status"></select>
+        </div>
+        <div class="tabel-wadah">
+          <table class="tabel">
+            <thead><tr><th>Tanggal</th><th>Waktu</th><th>Turnamen</th><th>Lokasi</th><th>Status</th><th class="kolom-aksi">Aksi</th></tr></thead>
+            <tbody id="tabel-m3"></tbody>
+          </table>
+        </div>
+      </section>
+<!-- ===== AKHIR BLOK: M3_JADWAL ===== -->
+
+
+<!-- ===== BLOK: M4_PEMAIN ===== -->
+      <section class="menu" id="m4" data-judul="Manajemen Pemain" hidden>
+        <div class="kepala-menu">
+          <h2 class="judul-section">Data Pemain</h2>
+          <div class="aksi-menu">
+            <button class="tombol-garis tombol-kecil" type="button" data-muat="m4"><svg class="ikon-kecil"><use href="#i-segar"/></svg> Muat ulang</button>
+            <button class="tombol-utama admin-saja" type="button" data-form="pemain" id="btn-tambah-pemain"><svg class="ikon-kecil"><use href="#i-tambah"/></svg> Tambah Pemain</button>
+          </div>
+        </div>
+        <div class="alat-tabel">
+          <label class="cari"><svg class="ikon-kecil"><use href="#i-cari"/></svg><input id="cari-m4" placeholder="Cari nama pemain..." aria-label="Cari pemain"></label>
+          <select class="input input-filter" id="filter-m4-posisi" data-pilihan="Posisi" data-semua="Semua Posisi" aria-label="Filter posisi"></select>
+          <select class="input input-filter" id="filter-m4-status" data-pilihan="StatusPemain" data-semua="Semua Status" aria-label="Filter status"></select>
+        </div>
+        <div class="tabel-wadah">
+          <table class="tabel">
+            <thead><tr><th>Foto</th><th>No</th><th>Nama</th><th>Posisi</th><th>Umur</th><th>Tim Utama</th><th>Link Profil</th><th>Status</th><th class="kolom-aksi">Aksi</th></tr></thead>
+            <tbody id="tabel-m4"></tbody>
+          </table>
+        </div>
+      </section>
+<!-- ===== AKHIR BLOK: M4_PEMAIN ===== -->
+
+
+<!-- ===== BLOK: M5_DOKUMEN_PEMAIN ===== -->
+      <section class="menu" id="m5" data-judul="Dokumen Pemain" hidden>
+        <div class="kepala-menu">
+          <h2 class="judul-section">Dokumen Pemain</h2>
+          <button class="tombol-garis tombol-kecil" type="button" data-muat="m5"><svg class="ikon-kecil"><use href="#i-segar"/></svg> Muat ulang</button>
+        </div>
+
+        <div class="kartu-panel">
+          <div class="kepala-panel">
+            <h3 class="panel-judul">Jenis Dokumen (Judul Kartu)</h3>
+            <button class="tombol-utama tombol-kecil admin-saja" type="button" data-form="jenis" id="btn-tambah-jenis"><svg class="ikon-kecil"><use href="#i-tambah"/></svg> Tambah</button>
+          </div>
+          <div class="tabel-wadah">
+            <table class="tabel">
+              <thead><tr><th>Nama Dokumen</th><th>Urutan</th><th>Aktif</th><th class="kolom-aksi admin-saja">Aksi</th></tr></thead>
+              <tbody id="tabel-jenis"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="kartu-panel">
+          <div class="kepala-panel">
+            <h3 class="panel-judul">Matriks Dokumen</h3>
+            <div class="legenda">
+              <span class="status-dok status-belum-ada">Belum Ada</span>
+              <span class="status-dok status-menunggu">Belum Diverifikasi</span>
+              <span class="status-dok status-ok">Terverifikasi</span>
+              <span class="status-dok status-tolak">Ditolak</span>
+            </div>
+          </div>
+          <div class="tabel-wadah">
+            <table class="tabel tabel-matriks">
+              <thead id="matriks-kepala"></thead>
+              <tbody id="matriks-badan"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+<!-- ===== AKHIR BLOK: M5_DOKUMEN_PEMAIN ===== -->
+
+
+<!-- ===== BLOK: M6_SOROTAN_PERTANDINGAN ===== -->
+      <section class="menu" id="m6" data-judul="Sorotan Pertandingan" hidden>
+        <div class="kepala-menu">
+          <h2 class="judul-section">Sorotan Pertandingan</h2>
+          <button class="tombol-garis tombol-kecil" type="button" data-muat="m6"><svg class="ikon-kecil"><use href="#i-segar"/></svg> Muat ulang</button>
+        </div>
+
+        <div class="kartu-panel">
+          <div class="kepala-panel">
+            <h3 class="panel-judul">Team of the Match</h3>
+            <button class="tombol-utama tombol-kecil" type="button" data-form="sorotan" id="btn-tambah-sorotan"><svg class="ikon-kecil"><use href="#i-tambah"/></svg> Tambah Sorotan</button>
+          </div>
+          <div class="tabel-wadah">
+            <table class="tabel">
+              <thead><tr><th>Gambar</th><th>Nama Turnamen</th><th>Aktif</th><th class="kolom-aksi">Aksi</th></tr></thead>
+              <tbody id="tabel-sorotan"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="kartu-panel">
+          <div class="kepala-panel">
+            <h3 class="panel-judul">Penghargaan Pemain</h3>
+            <div class="aksi-menu">
+              <select class="input input-filter" id="filter-sorotan" aria-label="Pilih sorotan"></select>
+              <button class="tombol-utama tombol-kecil" type="button" data-form="penghargaan" id="btn-tambah-penghargaan"><svg class="ikon-kecil"><use href="#i-tambah"/></svg> Tambah</button>
+            </div>
+          </div>
+          <div class="tabel-wadah">
+            <table class="tabel">
+              <thead><tr><th>Foto</th><th>Pemain</th><th>Kategori</th><th>Gelar</th><th>Urutan</th><th class="kolom-aksi">Aksi</th></tr></thead>
+              <tbody id="tabel-penghargaan"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+<!-- ===== AKHIR BLOK: M6_SOROTAN_PERTANDINGAN ===== -->
+
+
+<!-- ===== BLOK: M7_GALERI ===== -->
+      <section class="menu" id="m7" data-judul="Manajemen Galeri" hidden>
+        <div class="kepala-menu">
+          <h2 class="judul-section">Galeri</h2>
+          <div class="aksi-menu">
+            <button class="tombol-garis tombol-kecil" type="button" data-muat="m7"><svg class="ikon-kecil"><use href="#i-segar"/></svg> Muat ulang</button>
+            <button class="tombol-utama" type="button" data-form="galeri" id="btn-tambah-galeri"><svg class="ikon-kecil"><use href="#i-tambah"/></svg> Tambah Item</button>
+          </div>
+        </div>
+        <div class="alat-tabel">
+          <select class="input input-filter" id="filter-m7-tipe" data-pilihan="TipeGaleri" data-semua="Semua Tipe" aria-label="Filter tipe"></select>
+        </div>
+        <div class="tabel-wadah">
+          <table class="tabel">
+            <thead><tr><th>Thumbnail</th><th>Tipe</th><th>Judul</th><th>Tanggal</th><th>Aktif</th><th class="kolom-aksi">Aksi</th></tr></thead>
+            <tbody id="tabel-m7"></tbody>
+          </table>
+        </div>
+      </section>
+<!-- ===== AKHIR BLOK: M7_GALERI ===== -->
+
+
+<!-- ===== BLOK: M8_PRESTASI ===== -->
+      <section class="menu" id="m8" data-judul="Manajemen Prestasi" hidden>
+        <div class="kepala-menu">
+          <h2 class="judul-section">Prestasi</h2>
+          <div class="aksi-menu">
+            <button class="tombol-garis tombol-kecil" type="button" data-muat="m8"><svg class="ikon-kecil"><use href="#i-segar"/></svg> Muat ulang</button>
+            <button class="tombol-utama" type="button" data-form="prestasi" id="btn-tambah-prestasi"><svg class="ikon-kecil"><use href="#i-tambah"/></svg> Tambah Prestasi</button>
+          </div>
+        </div>
+        <div class="tabel-wadah">
+          <table class="tabel">
+            <thead><tr><th>Trofi</th><th>Peringkat</th><th>Kejuaraan</th><th>Tahun</th><th>Urutan</th><th class="kolom-aksi">Aksi</th></tr></thead>
+            <tbody id="tabel-m8"></tbody>
+          </table>
+        </div>
+      </section>
+<!-- ===== AKHIR BLOK: M8_PRESTASI ===== -->
+
+
+<!-- ===== BLOK: M9_SPONSOR ===== -->
+      <section class="menu" id="m9" data-judul="Manajemen Sponsor" hidden>
+        <div class="kepala-menu">
+          <h2 class="judul-section">Sponsor</h2>
+          <div class="aksi-menu">
+            <button class="tombol-garis tombol-kecil" type="button" data-muat="m9"><svg class="ikon-kecil"><use href="#i-segar"/></svg> Muat ulang</button>
+            <button class="tombol-utama" type="button" data-form="sponsor" id="btn-tambah-sponsor"><svg class="ikon-kecil"><use href="#i-tambah"/></svg> Tambah Sponsor</button>
+          </div>
+        </div>
+        <div class="tabel-wadah">
+          <table class="tabel">
+            <thead><tr><th>Logo</th><th>Nama Sponsor</th><th>Link</th><th>Urutan</th><th>Aktif</th><th class="kolom-aksi">Aksi</th></tr></thead>
+            <tbody id="tabel-m9"></tbody>
+          </table>
+        </div>
+      </section>
+<!-- ===== AKHIR BLOK: M9_SPONSOR ===== -->
+
+
+<!-- ===== BLOK: M10_PESAN_KONTAK ===== -->
+      <section class="menu" id="m10" data-judul="Pesan Kontak" hidden>
+        <div class="kepala-menu">
+          <h2 class="judul-section">Kotak Masuk</h2>
+          <button class="tombol-garis tombol-kecil" type="button" data-muat="m10"><svg class="ikon-kecil"><use href="#i-segar"/></svg> Muat ulang</button>
+        </div>
+        <div class="alat-tabel">
+          <label class="cari"><svg class="ikon-kecil"><use href="#i-cari"/></svg><input id="cari-m10" placeholder="Cari nama, email, atau subjek..." aria-label="Cari pesan"></label>
+          <select class="input input-filter" id="filter-m10-status" data-pilihan="StatusPesan" data-semua="Semua Status" aria-label="Filter status"></select>
+        </div>
+        <div class="tabel-wadah">
+          <table class="tabel">
+            <thead><tr><th>Tanggal</th><th>Nama</th><th>Email</th><th>Subjek</th><th>Status</th><th class="kolom-aksi">Aksi</th></tr></thead>
+            <tbody id="tabel-m10"></tbody>
+          </table>
+        </div>
+      </section>
+<!-- ===== AKHIR BLOK: M10_PESAN_KONTAK ===== -->
+
+
+<!-- ===== BLOK: M11_PENGATURAN ===== -->
+      <section class="menu" id="m11" data-judul="Pengaturan Situs" hidden>
+        <div class="kepala-menu">
+          <h2 class="judul-section">Pengaturan Situs</h2>
+          <button class="tombol-garis tombol-kecil" type="button" data-muat="m11"><svg class="ikon-kecil"><use href="#i-segar"/></svg> Muat ulang</button>
+        </div>
+        <form class="kartu-panel form-admin" id="form-pengaturan" novalidate>
+          <div class="form-2">
+            <label class="field"><span class="field-label">Email</span><input class="input" name="Email" type="email" maxlength="120"></label>
+            <label class="field"><span class="field-label">Telepon</span><input class="input" name="Telepon" maxlength="25" placeholder="+62 ..."></label>
+          </div>
+          <label class="field"><span class="field-label">Alamat Markas (Headquarters)</span><textarea class="input" name="AlamatMarkas" rows="3" maxlength="500"></textarea></label>
+          <div class="form-2">
+            <label class="field"><span class="field-label">URL Facebook</span><input class="input" name="FacebookURL" type="url" placeholder="https://"></label>
+            <label class="field"><span class="field-label">URL Instagram</span><input class="input" name="InstagramURL" type="url" placeholder="https://"></label>
+            <label class="field"><span class="field-label">URL TikTok</span><input class="input" name="TiktokURL" type="url" placeholder="https://"></label>
+            <label class="field"><span class="field-label">URL YouTube</span><input class="input" name="YoutubeURL" type="url" placeholder="https://"></label>
+          </div>
+          <label class="field"><span class="field-label">Teks Copyright</span><input class="input" name="TeksCopyright" maxlength="200"></label>
+          <div class="form-2">
+            <label class="field"><span class="field-label">Google reCAPTCHA v2 Site Key</span><input class="input" name="RecaptchaSiteKey" maxlength="100" autocomplete="off" spellcheck="false"></label>
+            <label class="field"><span class="field-label">Google reCAPTCHA v2 Secret Key</span><input class="input" name="RecaptchaSecretKey" id="input-recaptcha-secret" type="password" maxlength="100" autocomplete="new-password" spellcheck="false" placeholder="Kosongkan jika tidak diubah"></label>
+          </div>
+          <p class="teks-bantu" id="status-recaptcha"></p>
+          <div class="form-aksi">
+            <button class="tombol-utama" type="submit" id="btn-simpan-pengaturan"><svg class="ikon-kecil"><use href="#i-cek"/></svg> Simpan Pengaturan</button>
+          </div>
+        </form>
+      </section>
+<!-- ===== AKHIR BLOK: M11_PENGATURAN ===== -->
+
+
+<!-- ===== BLOK: M12_PENGGUNA ===== -->
+      <section class="menu" id="m12" data-judul="Manajemen Pengguna" hidden>
+        <div class="kepala-menu">
+          <h2 class="judul-section">Akun Pengguna</h2>
+          <div class="aksi-menu">
+            <button class="tombol-garis tombol-kecil" type="button" data-muat="m12"><svg class="ikon-kecil"><use href="#i-segar"/></svg> Muat ulang</button>
+            <button class="tombol-utama" type="button" data-form="pengguna" id="btn-tambah-pengguna"><svg class="ikon-kecil"><use href="#i-tambah"/></svg> Tambah Akun</button>
+          </div>
+        </div>
+        <div class="tabel-wadah">
+          <table class="tabel">
+            <thead><tr><th>Username</th><th>Nama Lengkap</th><th>Role</th><th>Status</th><th class="kolom-aksi">Aksi</th></tr></thead>
+            <tbody id="tabel-m12"></tbody>
+          </table>
+        </div>
+      </section>
+<!-- ===== AKHIR BLOK: M12_PENGGUNA ===== -->
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== BLOK: MODAL_FORM ===== -->
+<div class="modal" id="modal-form" hidden>
+  <div class="modal-kotak modal-lebar" role="dialog" aria-modal="true" aria-labelledby="modal-form-judul">
+    <div class="modal-kepala">
+      <h3 class="modal-judul" id="modal-form-judul">Form</h3>
+      <button class="tombol-ikon" type="button" data-tutup aria-label="Tutup"><svg class="ikon"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="modal-badan">
+
+      <form class="form-admin" id="form-slider" data-tabel="SliderBerita" data-fungsi="simpanSlider" data-menu="m2" novalidate hidden>
+        <input type="hidden" name="ID">
+        <div class="form-2">
+          <label class="field"><span class="field-label">Label Kategori</span><input class="input" name="LabelKategori" maxlength="40" placeholder="Misal: U9 TEAM"></label>
+          <label class="field"><span class="field-label">Urutan</span><input class="input" name="Urutan" type="number" min="0"></label>
+        </div>
+        <label class="field"><span class="field-label">Judul *</span><input class="input" name="Judul" maxlength="160" required></label>
+        <div class="field field-gambar" data-kolom="Gambar">
+          <span class="field-label">Gambar</span>
+          <div class="pratinjau-gambar"><img alt="Pratinjau" hidden></div>
+          <input class="input-file" type="file" accept="image/png,image/jpeg,image/webp" data-file="Gambar">
+          <input class="input" name="Gambar" type="url" placeholder="atau tempel URL gambar (https://...)">
+        </div>
+        <div class="form-2">
+          <label class="field"><span class="field-label">Link Tombol</span><input class="input" name="LinkTombol" type="url" placeholder="https://"></label>
+          <label class="field"><span class="field-label">Aktif *</span><select class="input" name="Aktif" data-pilihan="YaTidak" required></select></label>
+        </div>
+        <div class="form-aksi"><button class="tombol-garis" type="button" data-tutup>Batal</button><button class="tombol-utama" type="submit">Simpan</button></div>
+      </form>
+
+      <form class="form-admin" id="form-jadwal" data-tabel="Jadwal" data-fungsi="simpanJadwal" data-menu="m3" novalidate hidden>
+        <input type="hidden" name="ID">
+        <label class="field"><span class="field-label">Nama Turnamen *</span><input class="input" name="NamaTurnamen" maxlength="120" required></label>
+        <div class="form-2">
+          <label class="field"><span class="field-label">Tanggal *</span><input class="input" name="Tanggal" type="date" required></label>
+          <label class="field"><span class="field-label">Waktu (WIT) *</span><input class="input" name="Waktu" type="time" required></label>
+        </div>
+        <label class="field"><span class="field-label">Lokasi *</span><input class="input" name="Lokasi" maxlength="160" required></label>
+        <label class="field"><span class="field-label">Status *</span><select class="input" name="Status" data-pilihan="StatusJadwal" required></select></label>
+        <div class="form-aksi"><button class="tombol-garis" type="button" data-tutup>Batal</button><button class="tombol-utama" type="submit">Simpan</button></div>
+      </form>
+
+      <form class="form-admin" id="form-pemain" data-tabel="Pemain" data-fungsi="simpanPemain" data-menu="m4" novalidate hidden>
+        <input type="hidden" name="ID">
+        <div class="form-2">
+          <label class="field"><span class="field-label">Nama Lengkap *</span><input class="input" name="NamaLengkap" maxlength="100" required></label>
+          <label class="field"><span class="field-label">Nama Panggilan</span><input class="input" name="NamaPanggilan" maxlength="40"></label>
+          <label class="field"><span class="field-label">Nomor Punggung *</span><input class="input" name="NomorPunggung" type="number" min="0" max="999" required></label>
+          <label class="field"><span class="field-label">Posisi *</span><select class="input" name="Posisi" data-pilihan="Posisi" required></select></label>
+          <label class="field"><span class="field-label">Label Akademi</span><input class="input" name="LabelAkademi" maxlength="40"></label>
+          <label class="field"><span class="field-label">Tempat Lahir</span><input class="input" name="TempatLahir" maxlength="60"></label>
+          <label class="field"><span class="field-label">Tanggal Lahir</span><input class="input" name="TanggalLahir" type="date"></label>
+          <label class="field"><span class="field-label">Urutan</span><input class="input" name="Urutan" type="number" min="0"></label>
+          <label class="field"><span class="field-label">Tinggi Badan (cm)</span><input class="input" name="TinggiBadan" type="number" min="0" step="0.1"></label>
+          <label class="field"><span class="field-label">Berat Badan (kg)</span><input class="input" name="BeratBadan" type="number" min="0" step="0.1"></label>
+        </div>
+        <div class="form-2">
+          <div class="field field-gambar" data-kolom="FotoKartu">
+            <span class="field-label">Foto Kartu (halaman Tim)</span>
+            <div class="pratinjau-gambar"><img alt="Pratinjau" hidden></div>
+            <input class="input-file" type="file" accept="image/png,image/jpeg,image/webp" data-file="FotoKartu">
+            <input class="input" name="FotoKartu" type="url" placeholder="atau URL https://...">
+          </div>
+          <div class="field field-gambar" data-kolom="FotoProfil">
+            <span class="field-label">Foto Profil (PNG transparan)</span>
+            <div class="pratinjau-gambar pratinjau-transparan"><img alt="Pratinjau" hidden></div>
+            <input class="input-file" type="file" accept="image/png" data-file="FotoProfil">
+            <input class="input" name="FotoProfil" type="url" placeholder="atau URL https://...">
+          </div>
+        </div>
+        <label class="field">
+          <span class="field-label">Link Profil Eksternal (logo Pena Nib)</span>
+          <span class="input-gabung">
+            <input class="input" name="LinkProfilEksternal" id="input-link-profil" type="url" placeholder="https://... (kosongkan untuk menonaktifkan tautan)">
+            <button class="tombol-garis tombol-kecil" type="button" id="btn-uji-link"><svg class="ikon-kecil"><use href="#i-tautan"/></svg> Uji Link</button>
+          </span>
+        </label>
+        <div class="form-2">
+          <label class="field"><span class="field-label">Tim Utama</span><select class="input" name="TimUtama" data-pilihan="YaTidak"></select></label>
+          <label class="field"><span class="field-label">Status *</span><select class="input" name="Status" data-pilihan="StatusPemain" required></select></label>
+        </div>
+        <div class="form-aksi"><button class="tombol-garis" type="button" data-tutup>Batal</button><button class="tombol-utama" type="submit">Simpan</button></div>
+      </form>
+
+      <form class="form-admin" id="form-jenis" data-tabel="JenisDokumen" data-fungsi="simpanJenisDokumen" data-menu="m5" novalidate hidden>
+        <input type="hidden" name="ID">
+        <label class="field"><span class="field-label">Nama Dokumen (judul kartu) *</span><input class="input" name="NamaDokumen" maxlength="60" required></label>
+        <div class="form-2">
+          <label class="field"><span class="field-label">Urutan</span><input class="input" name="Urutan" type="number" min="0"></label>
+          <label class="field"><span class="field-label">Aktif *</span><select class="input" name="Aktif" data-pilihan="YaTidak" required></select></label>
+        </div>
+        <div class="form-aksi"><button class="tombol-garis" type="button" data-tutup>Batal</button><button class="tombol-utama" type="submit">Simpan</button></div>
+      </form>
+
+      <form class="form-admin" id="form-sorotan" data-tabel="SorotanPertandingan" data-fungsi="simpanSorotan" data-menu="m6" novalidate hidden>
+        <input type="hidden" name="ID">
+        <label class="field"><span class="field-label">Nama Turnamen *</span><input class="input" name="NamaTurnamen" maxlength="120" required></label>
+        <div class="field field-gambar" data-kolom="GambarTeamOfTheMatch">
+          <span class="field-label">Gambar Team of the Match</span>
+          <div class="pratinjau-gambar"><img alt="Pratinjau" hidden></div>
+          <input class="input-file" type="file" accept="image/png,image/jpeg,image/webp" data-file="GambarTeamOfTheMatch">
+          <input class="input" name="GambarTeamOfTheMatch" type="url" placeholder="atau URL https://...">
+        </div>
+        <label class="field"><span class="field-label">Keterangan Penilaian</span><textarea class="input" name="KeteranganPenilaian" rows="3" maxlength="600"></textarea></label>
+        <label class="field"><span class="field-label">Aktif *</span><select class="input" name="Aktif" data-pilihan="YaTidak" required></select></label>
+        <div class="form-aksi"><button class="tombol-garis" type="button" data-tutup>Batal</button><button class="tombol-utama" type="submit">Simpan</button></div>
+      </form>
+
+      <form class="form-admin" id="form-penghargaan" data-tabel="PenghargaanPemain" data-fungsi="simpanPenghargaan" data-menu="m6" novalidate hidden>
+        <input type="hidden" name="ID">
+        <div class="form-2">
+          <label class="field"><span class="field-label">Sorotan *</span><select class="input" name="SorotanID" id="pilih-sorotan" required></select></label>
+          <label class="field"><span class="field-label">Pemain *</span><select class="input" name="PemainID" id="pilih-pemain" required></select></label>
+          <label class="field"><span class="field-label">Kategori</span><input class="input" name="Kategori" maxlength="60" placeholder="Misal: Pemain Terbaik"></label>
+          <label class="field"><span class="field-label">Gelar *</span><input class="input" name="Gelar" maxlength="40" placeholder="Misal: MVP" required></label>
+          <label class="field"><span class="field-label">Subjudul</span><input class="input" name="Subjudul" maxlength="60"></label>
+          <label class="field"><span class="field-label">Urutan</span><input class="input" name="Urutan" type="number" min="0"></label>
+        </div>
+        <label class="field"><span class="field-label">Penilaian</span><textarea class="input" name="Penilaian" rows="3" maxlength="400"></textarea></label>
+        <div class="field field-gambar" data-kolom="Foto">
+          <span class="field-label">Foto</span>
+          <div class="pratinjau-gambar"><img alt="Pratinjau" hidden></div>
+          <input class="input-file" type="file" accept="image/png,image/jpeg,image/webp" data-file="Foto">
+          <input class="input" name="Foto" type="url" placeholder="atau URL https://...">
+        </div>
+        <div class="form-aksi"><button class="tombol-garis" type="button" data-tutup>Batal</button><button class="tombol-utama" type="submit">Simpan</button></div>
+      </form>
+
+      <form class="form-admin" id="form-galeri" data-tabel="Galeri" data-fungsi="simpanGaleri" data-menu="m7" novalidate hidden>
+        <input type="hidden" name="ID">
+        <div class="form-2">
+          <label class="field"><span class="field-label">Tipe *</span><select class="input" name="Tipe" data-pilihan="TipeGaleri" required></select></label>
+          <label class="field"><span class="field-label">Label Kategori</span><input class="input" name="LabelKategori" maxlength="40" placeholder="Misal: ACADEMY GALLERY"></label>
+        </div>
+        <label class="field"><span class="field-label">Judul *</span><input class="input" name="Judul" maxlength="160" required></label>
+        <label class="field" id="field-link-video" hidden><span class="field-label" id="label-link-galeri">Link Video * (YouTube, Google Drive, atau file .mp4)</span><input class="input" name="LinkURL" id="input-link-video" type="url" placeholder="https://www.youtube.com/watch?v=..."></label>
+        <div class="field field-gambar" data-kolom="Thumbnail">
+          <span class="field-label" id="label-thumbnail-galeri">Thumbnail</span>
+          <div class="pratinjau-gambar"><img alt="Pratinjau" hidden></div>
+          <input class="input-file" id="file-thumbnail-galeri" type="file" accept="image/png,image/jpeg,image/webp" data-file="Thumbnail">
+          <input class="input" name="Thumbnail" type="url" placeholder="atau URL https://...">
+        </div>
+        <div class="form-2">
+          <label class="field"><span class="field-label">Tanggal Kegiatan</span><input class="input" name="TanggalKegiatan" type="date"></label>
+          <label class="field"><span class="field-label">Aktif *</span><select class="input" name="Aktif" data-pilihan="YaTidak" required></select></label>
+        </div>
+        <div class="form-aksi"><button class="tombol-garis" type="button" data-tutup>Batal</button><button class="tombol-utama" type="submit">Simpan</button></div>
+      </form>
+
+      <form class="form-admin" id="form-prestasi" data-tabel="Prestasi" data-fungsi="simpanPrestasi" data-menu="m8" novalidate hidden>
+        <input type="hidden" name="ID">
+        <div class="form-2">
+          <label class="field"><span class="field-label">Peringkat *</span><select class="input" name="Peringkat" data-pilihan="Peringkat" required></select></label>
+          <label class="field"><span class="field-label">Tahun</span><input class="input" name="Tahun" type="number" min="2000" max="2100"></label>
+        </div>
+        <label class="field"><span class="field-label">Nama Kejuaraan *</span><input class="input" name="NamaKejuaraan" maxlength="120" required></label>
+        <div class="field field-gambar" data-kolom="GambarTrofi">
+          <span class="field-label">Gambar Trofi</span>
+          <div class="pratinjau-gambar"><img alt="Pratinjau" hidden></div>
+          <input class="input-file" type="file" accept="image/png,image/jpeg,image/webp" data-file="GambarTrofi">
+          <input class="input" name="GambarTrofi" type="url" placeholder="atau URL https://...">
+        </div>
+        <label class="field"><span class="field-label">Urutan</span><input class="input" name="Urutan" type="number" min="0"></label>
+        <div class="form-aksi"><button class="tombol-garis" type="button" data-tutup>Batal</button><button class="tombol-utama" type="submit">Simpan</button></div>
+      </form>
+
+      <form class="form-admin" id="form-sponsor" data-tabel="Sponsor" data-fungsi="simpanSponsor" data-menu="m9" novalidate hidden>
+        <input type="hidden" name="ID">
+        <label class="field"><span class="field-label">Nama Sponsor *</span><input class="input" name="NamaSponsor" maxlength="100" required></label>
+        <div class="field field-gambar" data-kolom="Logo">
+          <span class="field-label">Logo</span>
+          <div class="pratinjau-gambar pratinjau-transparan"><img alt="Pratinjau" hidden></div>
+          <input class="input-file" type="file" accept="image/png,image/jpeg,image/webp" data-file="Logo">
+          <input class="input" name="Logo" type="url" placeholder="atau URL https://...">
+        </div>
+        <label class="field"><span class="field-label">Link Website</span><input class="input" name="LinkURL" type="url" placeholder="https://"></label>
+        <div class="form-2">
+          <label class="field"><span class="field-label">Urutan</span><input class="input" name="Urutan" type="number" min="0"></label>
+          <label class="field"><span class="field-label">Aktif *</span><select class="input" name="Aktif" data-pilihan="YaTidak" required></select></label>
+        </div>
+        <div class="form-aksi"><button class="tombol-garis" type="button" data-tutup>Batal</button><button class="tombol-utama" type="submit">Simpan</button></div>
+      </form>
+
+      <form class="form-admin" id="form-pengguna" data-menu="m12" novalidate hidden>
+        <input type="hidden" name="ID">
+        <div class="form-2">
+          <label class="field"><span class="field-label">Username *</span><input class="input" name="Username" maxlength="30" autocomplete="off" required></label>
+          <label class="field"><span class="field-label">Nama Lengkap *</span><input class="input" name="NamaLengkap" maxlength="100" required></label>
+          <label class="field"><span class="field-label">Role *</span><select class="input" name="Role" data-pilihan="Role" required></select></label>
+          <label class="field"><span class="field-label">Status *</span><select class="input" name="Status" data-pilihan="StatusAkun" required></select></label>
+        </div>
+        <label class="field" id="field-password-baru"><span class="field-label">Password Awal * (min. 8 karakter, huruf dan angka)</span><input class="input" name="Password" type="password" autocomplete="new-password" maxlength="100"></label>
+        <div class="form-aksi"><button class="tombol-garis" type="button" data-tutup>Batal</button><button class="tombol-utama" type="submit">Simpan</button></div>
+      </form>
+
+      <form class="form-admin" id="form-reset" data-menu="m12" novalidate hidden>
+        <input type="hidden" name="ID">
+        <p class="teks-bantu" id="reset-untuk"></p>
+        <label class="field"><span class="field-label">Password Baru * (min. 8 karakter, huruf dan angka)</span><input class="input" name="Password" type="password" autocomplete="new-password" maxlength="100" required></label>
+        <div class="form-aksi"><button class="tombol-garis" type="button" data-tutup>Batal</button><button class="tombol-utama" type="submit">Reset Password</button></div>
+      </form>
+
+    </div>
+  </div>
+</div>
+<!-- ===== AKHIR BLOK: MODAL_FORM ===== -->
+
+
+<!-- ===== BLOK: MODAL_DOKUMEN ===== -->
+<div class="modal" id="modal-dokumen" hidden>
+  <div class="modal-kotak" role="dialog" aria-modal="true" aria-labelledby="dok-judul">
+    <div class="modal-kepala">
+      <h3 class="modal-judul" id="dok-judul">Dokumen</h3>
+      <button class="tombol-ikon" type="button" data-tutup aria-label="Tutup"><svg class="ikon"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="modal-badan">
+      <p class="teks-bantu" id="dok-sub"></p>
+      <div class="dok-info" id="dok-info"></div>
+      <div class="form-aksi form-aksi-kiri">
+        <button class="tombol-garis" type="button" id="btn-dok-lihat"><svg class="ikon-kecil"><use href="#i-mata"/></svg> Lihat Dokumen</button>
+      </div>
+      <div class="dok-admin admin-saja" id="dok-admin">
+        <label class="field">
+          <span class="field-label">Unggah / Ganti File (PDF, JPG, PNG, maks. 5 MB)</span>
+          <input class="input-file" type="file" id="dok-file" accept="application/pdf,image/jpeg,image/png">
+        </label>
+        <div class="form-aksi form-aksi-kiri">
+          <button class="tombol-utama" type="button" id="btn-dok-unggah"><svg class="ikon-kecil"><use href="#i-unggah"/></svg> Unggah</button>
+        </div>
+        <div class="dok-verifikasi" id="dok-verifikasi">
+          <label class="field"><span class="field-label">Catatan Verifikasi (wajib jika ditolak)</span><textarea class="input" id="dok-catatan" rows="2" maxlength="500"></textarea></label>
+          <div class="form-aksi">
+            <button class="tombol-bahaya-garis" type="button" id="btn-dok-tolak"><svg class="ikon-kecil"><use href="#i-x"/></svg> Tolak</button>
+            <button class="tombol-sukses" type="button" id="btn-dok-setujui"><svg class="ikon-kecil"><use href="#i-cek"/></svg> Verifikasi</button>
+          </div>
+        </div>
+        <div class="form-aksi form-aksi-kiri">
+          <button class="tombol-bahaya" type="button" id="btn-dok-hapus"><svg class="ikon-kecil"><use href="#i-hapus"/></svg> Hapus Dokumen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-viewer" hidden>
+  <div class="modal-kotak modal-viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-judul">
+    <div class="modal-kepala">
+      <h3 class="modal-judul" id="viewer-judul">Dokumen</h3>
+      <div class="aksi-menu">
+        <a class="tombol-garis tombol-kecil" id="viewer-unduh"><svg class="ikon-kecil"><use href="#i-unduh"/></svg> Unduh</a>
+        <button class="tombol-ikon" type="button" data-tutup aria-label="Tutup"><svg class="ikon"><use href="#i-x"/></svg></button>
+      </div>
+    </div>
+    <div class="viewer-isi" id="viewer-isi"></div>
+  </div>
+</div>
+<!-- ===== AKHIR BLOK: MODAL_DOKUMEN ===== -->
+
+
+<!-- ===== BLOK: MODAL_UMUM ===== -->
+<div class="modal" id="modal-konfirmasi" hidden>
+  <div class="modal-kotak modal-kecil" role="alertdialog" aria-modal="true" aria-labelledby="konfirmasi-teks">
+    <div class="modal-badan">
+      <p class="konfirmasi-teks" id="konfirmasi-teks"></p>
+      <div class="form-aksi">
+        <button class="tombol-garis" type="button" id="btn-konfirmasi-batal">Batal</button>
+        <button class="tombol-bahaya" type="button" id="btn-konfirmasi-ya">Ya, Hapus</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-info" hidden>
+  <div class="modal-kotak modal-kecil" role="dialog" aria-modal="true" aria-labelledby="info-teks">
+    <div class="modal-badan modal-tengah">
+      <span class="info-ikon"><svg class="ikon"><use href="#i-gembok"/></svg></span>
+      <p class="konfirmasi-teks" id="info-teks"></p>
+      <div class="form-aksi form-aksi-tengah">
+        <button class="tombol-garis" type="button" data-tutup>Tutup</button>
+        <a class="tombol-utama" href="#login" id="info-login" data-tutup>Login</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-pesan" hidden>
+  <div class="modal-kotak" role="dialog" aria-modal="true" aria-labelledby="pesan-subjek">
+    <div class="modal-kepala">
+      <h3 class="modal-judul" id="pesan-subjek">Pesan</h3>
+      <button class="tombol-ikon" type="button" data-tutup aria-label="Tutup"><svg class="ikon"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="modal-badan">
+      <p class="teks-bantu" id="pesan-dari"></p>
+      <p class="pesan-isi" id="pesan-isi"></p>
+      <div class="form-aksi">
+        <a class="tombol-garis" id="pesan-balas"><svg class="ikon-kecil"><use href="#i-surat"/></svg> Balas via Email</a>
+        <button class="tombol-utama" type="button" data-tutup>Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-gantipw" hidden>
+  <div class="modal-kotak modal-kecil" role="dialog" aria-modal="true" aria-labelledby="gantipw-judul">
+    <div class="modal-kepala">
+      <h3 class="modal-judul" id="gantipw-judul">Ganti Password</h3>
+      <button class="tombol-ikon" type="button" id="btn-gantipw-tutup" data-tutup aria-label="Tutup"><svg class="ikon"><use href="#i-x"/></svg></button>
+    </div>
+    <form class="modal-badan form-admin" id="form-gantipw" novalidate>
+      <p class="teks-bantu" id="gantipw-ket">Masukkan password lama dan password baru.</p>
+      <label class="field"><span class="field-label">Password Lama *</span><input class="input" name="lama" type="password" autocomplete="current-password" required></label>
+      <label class="field"><span class="field-label">Password Baru * (min. 8 karakter, huruf dan angka)</span><input class="input" name="baru" type="password" autocomplete="new-password" required></label>
+      <label class="field"><span class="field-label">Ulangi Password Baru *</span><input class="input" name="ulang" type="password" autocomplete="new-password" required></label>
+      <div class="form-aksi"><button class="tombol-utama" type="submit">Simpan Password</button></div>
+    </form>
+  </div>
+</div>
+
+<div class="modal lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Pratinjau gambar">
+  <button class="lb-tombol lb-tutup" type="button" data-tutup aria-label="Tutup"><svg class="ikon"><use href="#i-x"/></svg></button>
+  <button class="lb-tombol lb-nav lb-prev" id="lb-prev" type="button" aria-label="Gambar sebelumnya"><svg class="ikon"><use href="#i-kiri"/></svg></button>
+  <figure class="lb-isi" id="lb-isi">
+    <img class="lb-img" id="lb-img" alt="">
+    <figcaption class="lb-caption"><span id="lb-judul"></span><span class="lb-hitung" id="lb-hitung"></span></figcaption>
+  </figure>
+  <button class="lb-tombol lb-nav lb-next" id="lb-next" type="button" aria-label="Gambar berikutnya"><svg class="ikon"><use href="#i-kanan"/></svg></button>
+</div>
+
+<div class="modal lightbox" id="video-modal" hidden role="dialog" aria-modal="true" aria-labelledby="video-judul">
+  <button class="lb-tombol lb-tutup" type="button" data-tutup aria-label="Tutup video"><svg class="ikon"><use href="#i-x"/></svg></button>
+  <div class="video-kotak">
+    <div class="video-rasio" id="video-isi"></div>
+    <p class="video-judul" id="video-judul"></p>
+  </div>
+</div>
+
+<div class="toast-wadah" id="toast-wadah" aria-live="polite"></div>
+<!-- ===== AKHIR BLOK: MODAL_UMUM ===== -->
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
