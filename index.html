@@ -5,11 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>ASTI U9 Maluku Utara</title>
   <meta name="description" content="Website resmi Akademi Sepakbola ASTI U9 Maluku Utara: jadwal pertandingan, profil pemain, galeri, dan prestasi.">
-  <meta name="theme-color" content="#CF85B9">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17131C" media="(prefers-color-scheme: dark)">
+  <!-- Ikon aplikasi (layar utama Android & iPhone) -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="application-name" content="ASTI U9">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="ASTI U9">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="assets/ikon/apple-touch-icon.png">
   <meta property="og:title" content="ASTI U9 Maluku Utara">
   <meta property="og:description" content="Website resmi Akademi Sepakbola ASTI U9 Maluku Utara.">
   <meta property="og:image" content="assets/logo-asti.png">
-  <link rel="icon" type="image/png" href="assets/logo-asti.png">
+  <link rel="icon" href="assets/ikon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/ikon/favicon-32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -1101,5 +1111,11 @@
 
 <script src="js/config.js"></script>
 <script src="js/app.js"></script>
+<script>
+  // Daftarkan service worker agar website bisa dipasang di layar utama sebagai aplikasi.
+  if ('serviceWorker' in navigator && location.protocol === 'https:') {
+    window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
+  }
+</script>
 </body>
 </html>
