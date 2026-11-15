@@ -962,7 +962,8 @@ function tampilMenu(menu) {
 
 function barisMemuat(id, kolom) {
   const el = document.getElementById(id);
-  if (el) el.innerHTML = '<tr><td colspan="' + kolom + '"><p class="teks-memuat">Memuat...</p></td></tr>';
+  const baris = '<div class="k-tbaris"><span class="k k-thumb"></span><span class="k k-baris"></span><span class="k k-baris k-pendek"></span></div>';
+  if (el) el.innerHTML = '<tr><td colspan="' + kolom + '"><div class="teks-memuat kerangka kerangka-tabel" role="status" aria-label="Memuat">' + baris + baris + baris + baris + '</div></td></tr>';
 }
 
 function muatTabel(tabel, paksa) {
