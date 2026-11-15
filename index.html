@@ -806,30 +806,31 @@
         <div class="form-2">
           <label class="field"><span class="field-label">Nama Lengkap *</span><input class="input" name="NamaLengkap" maxlength="100" required></label>
           <label class="field"><span class="field-label">Nama Panggilan</span><input class="input" name="NamaPanggilan" maxlength="40"></label>
-          <label class="field"><span class="field-label">Nomor Punggung *</span><input class="input" name="NomorPunggung" type="number" min="0" max="999" required></label>
+          <label class="field khusus-pemain"><span class="field-label">Nomor Punggung *</span><input class="input" name="NomorPunggung" type="number" min="0" max="999" required></label>
           <label class="field"><span class="field-label">Posisi *</span><select class="input" name="Posisi" data-pilihan="Posisi" required></select></label>
-          <label class="field"><span class="field-label">Label Akademi</span><input class="input" name="LabelAkademi" maxlength="40"></label>
-          <label class="field"><span class="field-label">Tempat Lahir</span><input class="input" name="TempatLahir" maxlength="60"></label>
-          <label class="field"><span class="field-label">Tanggal Lahir</span><input class="input" name="TanggalLahir" type="date"></label>
-          <label class="field"><span class="field-label">Urutan</span><input class="input" name="Urutan" type="number" min="0"></label>
-          <label class="field"><span class="field-label">Tinggi Badan (cm)</span><input class="input" name="TinggiBadan" type="number" min="0" step="0.1"></label>
-          <label class="field"><span class="field-label">Berat Badan (kg)</span><input class="input" name="BeratBadan" type="number" min="0" step="0.1"></label>
+          <label class="field khusus-official" hidden><span class="field-label">Jabatan *</span><select class="input" name="Jabatan" data-pilihan="Jabatan" data-semua="Pilih jabatan"></select></label>
+          <label class="field khusus-pemain"><span class="field-label">Label Akademi</span><input class="input" name="LabelAkademi" maxlength="40"></label>
+          <label class="field khusus-pemain"><span class="field-label">Tempat Lahir</span><input class="input" name="TempatLahir" maxlength="60"></label>
+          <label class="field khusus-pemain"><span class="field-label">Tanggal Lahir</span><input class="input" name="TanggalLahir" type="date"></label>
+          <label class="field khusus-pemain"><span class="field-label">Urutan</span><input class="input" name="Urutan" type="number" min="0"></label>
+          <label class="field khusus-pemain"><span class="field-label">Tinggi Badan (cm)</span><input class="input" name="TinggiBadan" type="number" min="0" step="0.1"></label>
+          <label class="field khusus-pemain"><span class="field-label">Berat Badan (kg)</span><input class="input" name="BeratBadan" type="number" min="0" step="0.1"></label>
         </div>
         <div class="form-2">
           <div class="field field-gambar" data-kolom="FotoKartu">
-            <span class="field-label">Foto Kartu (halaman Tim)</span>
+            <span class="field-label" id="label-foto-pemain">Foto Kartu (halaman Tim)</span>
             <div class="pratinjau-gambar"><img alt="Pratinjau" hidden></div>
             <input class="input-file" type="file" accept="image/png,image/jpeg,image/webp" data-file="FotoKartu">
             <input class="input" name="FotoKartu" type="url" placeholder="atau URL https://...">
           </div>
-          <div class="field field-gambar" data-kolom="FotoProfil">
+          <div class="field field-gambar khusus-pemain" data-kolom="FotoProfil">
             <span class="field-label">Foto Profil (PNG transparan)</span>
             <div class="pratinjau-gambar pratinjau-transparan"><img alt="Pratinjau" hidden></div>
             <input class="input-file" type="file" accept="image/png" data-file="FotoProfil">
             <input class="input" name="FotoProfil" type="url" placeholder="atau URL https://...">
           </div>
         </div>
-        <label class="field">
+        <label class="field khusus-pemain">
           <span class="field-label">Link Profil Eksternal (logo Pena Nib)</span>
           <span class="input-gabung">
             <input class="input" name="LinkProfilEksternal" id="input-link-profil" type="url" placeholder="https://... (kosongkan untuk menonaktifkan tautan)">
@@ -837,8 +838,8 @@
           </span>
         </label>
         <div class="form-2">
-          <label class="field"><span class="field-label">Tim Utama</span><select class="input" name="TimUtama" data-pilihan="YaTidak"></select></label>
-          <label class="field"><span class="field-label">Status *</span><select class="input" name="Status" data-pilihan="StatusPemain" required></select></label>
+          <label class="field khusus-pemain"><span class="field-label">Tim Utama</span><select class="input" name="TimUtama" data-pilihan="YaTidak"></select></label>
+          <label class="field khusus-pemain"><span class="field-label">Status *</span><select class="input" name="Status" data-pilihan="StatusPemain" required></select></label>
         </div>
         <div class="form-aksi"><button class="tombol-garis" type="button" data-tutup>Batal</button><button class="tombol-utama" type="submit">Simpan</button></div>
       </form>

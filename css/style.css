@@ -2214,4 +2214,15 @@ html[data-tema="gelap"] .teks-kosong::before {
   background: var(--grad-primary); pointer-events: none; z-index: 4;
 }
 .profil-bio::after { display: none; }
+/* Coach & Officials (halaman Tim): kartu informasi, tidak bisa diklik */
+.kartu-official { cursor: default; }
+.kartu-official:hover .pemain-nama { color: inherit; }
+.kartu-official .pemain-baris { justify-content: center; text-align: center; }
+.kartu-official .pemain-baris > div { width: 100%; }
+.official-jabatan { display: inline-block; margin-top: 10px; padding: 6px 14px; border-radius: 999px; background: var(--pink-lembut); color: var(--pink-aktif); font-family: var(--font-judul); font-weight: 600; font-size: 13px; letter-spacing: .6px; text-transform: uppercase; }
+html[data-tema="gelap"] .official-jabatan { background: rgba(240, 140, 198, .16); color: #F6B4D9; }
+.kartu-official .pemain-info, .kartu-official .pemain-panggil, .kartu-official .pemain-nama { text-align: center; }
+.kartu-official .pemain-nama { max-width: 100%; margin: 0 auto; }
+/* Tabel admin: jabatan + keterangan Coach & Officials */
+.sub-official { display: block; margin-top: 2px; font-size: 11px; color: var(--teks-2); letter-spacing: .3px; }
 /* ===== AKHIR BLOK: REDESAIN_PINK_2026 ===== */

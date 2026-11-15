@@ -28,6 +28,12 @@ const S = {
 };
 
 const POSISI = ['Goalkeepers', 'Defenders', 'Midfielders', 'Forwards'];
+// Coach & Officials: disimpan di data Pemain dengan Posisi ini, tampil di halaman Tim tanpa halaman profil.
+const POSISI_OFFICIAL = 'Coach & Officials';
+const JABATAN = ['Team Manager', 'Head Coach', 'Assistant Coach', 'Analyst', 'Physical Coach', 'GK Coach', 'Team Secretary', 'Media Officer', 'Photographer & Videographer'];
+function isOfficial(p) { return !!p && p.Posisi === POSISI_OFFICIAL; }
+function urutPosisi(p) { const i = POSISI.indexOf(p.Posisi); return i === -1 ? POSISI.length : i; }
+function urutJabatan(p) { const i = JABATAN.indexOf(p.Jabatan); return i === -1 ? JABATAN.length : i; }
 const BULAN = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
 const BLN3 = ['JAN', 'FEB', 'MAR', 'APR', 'MEI', 'JUN', 'JUL', 'AGU', 'SEP', 'OKT', 'NOV', 'DES'];
 const HARI = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
@@ -361,7 +367,7 @@ function renderBeranda() {
   $('#beranda-foto').innerHTML = foto.length ? foto.map(kartuGaleri).join('') : '<p class="teks-kosong">Belum ada foto</p>';
   $('#beranda-video').innerHTML = video.length ? video.map(kartuGaleri).join('') : '<p class="teks-kosong">Belum ada video</p>';
 
-  const utama = d.pemain.filter(function (p) { return p.TimUtama === 'Ya'; });
+  const utama = d.pemain.filter(function (p) { return p.TimUtama === 'Ya' && !isOfficial(p); });
   $('#beranda-tim').innerHTML = utama.length ? utama.map(function (p) {
     return '<a class="kartu-tim" href="#pemain/' + encodeURIComponent(p.ID) + '">' +
       '<div class="kt-foto">' + gambar(p.FotoKartu || p.FotoProfil, p.NamaLengkap) + '</div>' +
@@ -637,9 +643,23 @@ function renderTim() {
           '<p class="pemain-meta">' + esc(posisiTunggal(p.Posisi)) + (p.Umur ? ' • ' + esc(p.Umur) + ' Thn' : '') + '</p>' +
           '<span class="pemain-tombol">Player Profile ' + ikon('i-kanan') + '</span></div></a>';
       }).join('') + '</div></section>';
-  }).join('');
+  }).join('') + renderOfficial();
   $('#daftar-tim').innerHTML = html || '<p class="teks-kosong">Belum ada data pemain</p>';
   amati($('#daftar-tim'));
+}
+
+// Coach & Officials: kartu bukan tautan (tidak membuka halaman profil).
+function renderOfficial() {
+  const isi = S.publik.pemain.filter(isOfficial).sort(function (a, b) { return urutJabatan(a) - urutJabatan(b); });
+  if (!isi.length) return '';
+  return '<section class="grup-posisi grup-official"><div class="kepala-section garis-bawah"><h2 class="judul-section">' + esc(POSISI_OFFICIAL) + '</h2>' +
+    '<span class="jumlah-pemain">' + isi.length + ' Orang</span></div><div class="grid-4">' + isi.map(function (p) {
+      return '<div class="kartu-pemain kartu-official animasi-muncul">' +
+        '<div class="pemain-foto">' + gambar(p.FotoKartu, p.NamaLengkap) + '</div>' +
+        '<div class="pemain-info"><div class="pemain-baris">' +
+        '<div><p class="pemain-panggil">' + esc(p.NamaPanggilan) + '</p><h3 class="pemain-nama">' + esc(p.NamaLengkap) + '</h3></div></div>' +
+        '<p class="pemain-meta official-jabatan">' + esc(p.Jabatan || POSISI_OFFICIAL) + '</p></div></div>';
+    }).join('') + '</div></section>';
 }
 // ===== AKHIR BLOK: H3_TIM =====
 
@@ -647,7 +667,7 @@ function renderTim() {
 // ===== BLOK: H3_PROFIL_PEMAIN =====
 function renderProfil() {
   const p = S.publik.pemain.find(function (x) { return x.ID === S.profilId; });
-  if (!p) { toast('Pemain tidak ditemukan.', 'gagal'); pergi('tim', true); return; }
+  if (!p || isOfficial(p)) { toast('Pemain tidak ditemukan.', 'gagal'); pergi('tim', true); return; }
   $('#profil-posisi').textContent = p.Posisi;
   $('#profil-label').textContent = p.LabelAkademi || '';
   $('#profil-label').hidden = !p.LabelAkademi;
@@ -1031,7 +1051,22 @@ function bukaForm(nama, baris) {
     form.Username.readOnly = false;
   }
   $('#modal-form-judul').textContent = (baris ? 'Ubah ' : 'Tambah ') + (JUDUL_FORM[nama] || '');
+  if (nama === 'pemain') aturFieldOfficial();
   bukaModal('modal-form');
+}
+
+// Form Pemain: Posisi "Coach & Officials" menyederhanakan isian menjadi
+// Nama Lengkap, Nama Panggilan, Jabatan, dan Upload Foto.
+function aturFieldOfficial() {
+  const form = $('#form-pemain');
+  const official = form.Posisi.value === POSISI_OFFICIAL;
+  form.classList.toggle('mode-official', official);
+  $$('.khusus-pemain', form).forEach(function (el) { el.hidden = official; });
+  $$('.khusus-official', form).forEach(function (el) { el.hidden = !official; });
+  form.NomorPunggung.required = !official;
+  form.Jabatan.required = official;
+  $('#label-foto-pemain').textContent = official ? 'Upload Foto' : 'Foto Kartu (halaman Tim)';
+  $('#modal-form-judul').textContent = $('#modal-form-judul').textContent.replace(/(Pemain|Coach & Official)$/, official ? 'Coach & Official' : 'Pemain');
 }
 
 function aturFieldVideo() {
@@ -1251,8 +1286,14 @@ function renderM4() {
   const q = $('#cari-m4').value.trim(), pos = $('#filter-m4-posisi').value, st = $('#filter-m4-status').value;
   const isi = d.filter(function (p) {
     return cocokCari(p.NamaLengkap + ' ' + p.NamaPanggilan + ' ' + p.NomorPunggung, q) && (!pos || p.Posisi === pos) && (!st || p.Status === st);
-  }).sort(function (a, b) { return POSISI.indexOf(a.Posisi) - POSISI.indexOf(b.Posisi) || (Number(a.Urutan) || 0) - (Number(b.Urutan) || 0); });
+  }).sort(function (a, b) { return urutPosisi(a) - urutPosisi(b) || (isOfficial(a) ? urutJabatan(a) - urutJabatan(b) : 0) || (Number(a.Urutan) || 0) - (Number(b.Urutan) || 0); });
   $('#tabel-m4').innerHTML = isi.length ? isi.map(function (p) {
+    if (isOfficial(p)) {
+      return '<tr class="baris-official">' + sel('Foto', thumb(p.FotoKartu)) + sel('No', '-') +
+        sel('Nama', esc(p.NamaLengkap)) + sel('Posisi', esc(p.Jabatan || '-') + '<small class="sub-official">' + esc(POSISI_OFFICIAL) + '</small>') +
+        sel('Umur', '-') + sel('Tim Utama', '-') + sel('Link Profil', '-') +
+        sel('Status', badgeYa(p.Status)) + sel('', tombolAksi('Pemain', p.ID, { adminSaja: true }), 'kolom-aksi') + '</tr>';
+    }
     const link = urlAman(p.LinkProfilEksternal);
     return '<tr>' + sel('Foto', thumb(p.FotoKartu || p.FotoProfil)) + sel('No', '<strong>' + esc(p.NomorPunggung) + '</strong>') +
       sel('Nama', esc(p.NamaLengkap)) + sel('Posisi', esc(p.Posisi)) + sel('Umur', p.Umur ? esc(p.Umur) + ' thn' : '-') +
@@ -1434,7 +1475,7 @@ function renderPenghargaan() {
 
 function isiPilihanPenghargaan() {
   $('#pilih-sorotan').innerHTML = (S.data.SorotanPertandingan || []).map(function (r) { return '<option value="' + esc(r.ID) + '">' + esc(r.NamaTurnamen) + '</option>'; }).join('');
-  $('#pilih-pemain').innerHTML = '<option value="">Pilih pemain</option>' + (S.data.Pemain || []).filter(function (p) { return p.Status === 'Aktif'; })
+  $('#pilih-pemain').innerHTML = '<option value="">Pilih pemain</option>' + (S.data.Pemain || []).filter(function (p) { return p.Status === 'Aktif' && !isOfficial(p); })
     .map(function (p) { return '<option value="' + esc(p.ID) + '">#' + esc(p.NomorPunggung) + ' ' + esc(p.NamaLengkap) + '</option>'; }).join('');
 }
 // ===== AKHIR BLOK: M6_SOROTAN_PERTANDINGAN =====
@@ -1686,6 +1727,7 @@ function pasangEvent() {
     sentuhX = null;
   });
   $('#form-galeri [name="Tipe"]').addEventListener('change', aturFieldVideo);
+  $('#form-pemain [name="Posisi"]').addEventListener('change', aturFieldOfficial);
 
   $('#hero-prev').addEventListener('click', function () { geserHero(-1, true); });
   $('#hero-next').addEventListener('click', function () { geserHero(1, true); });
