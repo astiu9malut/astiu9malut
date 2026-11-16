@@ -286,6 +286,19 @@ function perbaruiNavLogin() {
 
 
 // ===== BLOK: PUBLIK_DATA =====
+// Layar pembuka: logo ASTI memantul & berputar seperti bola, ditutup setelah data pertama dimuat.
+const WAKTU_MULAI = Date.now();
+function tutupPembuka() {
+  const el = document.getElementById('layar-pembuka');
+  if (!el || el.classList.contains('selesai')) return;
+  const sisa = Math.max(0, 900 - (Date.now() - WAKTU_MULAI));
+  setTimeout(function () {
+    el.classList.add('selesai');
+    setTimeout(function () { el.remove(); }, 600);
+  }, sisa);
+}
+setTimeout(tutupPembuka, 15000);
+
 function muatDataPublik() {
   if (S.memuatPublik) return S.memuatPublik;
   S.memuatPublik = panggil('muatPublik').then(function (d) {
@@ -296,7 +309,7 @@ function muatDataPublik() {
     $$('#hal-beranda .teks-memuat, #daftar-jadwal .teks-memuat, #daftar-tim .teks-memuat, #galeri-grid .teks-memuat, #prestasi-grid .teks-memuat')
       .forEach(function (el) { el.className = 'teks-gagal'; el.textContent = 'Gagal memuat data: ' + e.message; });
     gagal(e);
-  }).finally(function () { S.memuatPublik = null; });
+  }).finally(function () { S.memuatPublik = null; tutupPembuka(); });
   return S.memuatPublik;
 }
 
