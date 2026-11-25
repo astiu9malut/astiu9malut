@@ -286,6 +286,19 @@ function perbaruiNavLogin() {
 
 
 // ===== BLOK: PUBLIK_DATA =====
+// Layar pembuka: logo ASTI memantul & berputar seperti bola, ditutup setelah data pertama dimuat.
+const WAKTU_MULAI = Date.now();
+function tutupPembuka() {
+  const el = document.getElementById('layar-pembuka');
+  if (!el || el.classList.contains('selesai')) return;
+  const sisa = Math.max(0, 900 - (Date.now() - WAKTU_MULAI));
+  setTimeout(function () {
+    el.classList.add('selesai');
+    setTimeout(function () { el.remove(); }, 600);
+  }, sisa);
+}
+setTimeout(tutupPembuka, 15000);
+
 function muatDataPublik() {
   if (S.memuatPublik) return S.memuatPublik;
   S.memuatPublik = panggil('muatPublik').then(function (d) {
@@ -296,7 +309,7 @@ function muatDataPublik() {
     $$('#hal-beranda .teks-memuat, #daftar-jadwal .teks-memuat, #daftar-tim .teks-memuat, #galeri-grid .teks-memuat, #prestasi-grid .teks-memuat')
       .forEach(function (el) { el.className = 'teks-gagal'; el.textContent = 'Gagal memuat data: ' + e.message; });
     gagal(e);
-  }).finally(function () { S.memuatPublik = null; });
+  }).finally(function () { S.memuatPublik = null; tutupPembuka(); });
   return S.memuatPublik;
 }
 
@@ -962,7 +975,8 @@ function tampilMenu(menu) {
 
 function barisMemuat(id, kolom) {
   const el = document.getElementById(id);
-  if (el) el.innerHTML = '<tr><td colspan="' + kolom + '"><p class="teks-memuat">Memuat...</p></td></tr>';
+  const baris = '<div class="k-tbaris"><span class="k k-thumb"></span><span class="k k-baris"></span><span class="k k-baris k-pendek"></span></div>';
+  if (el) el.innerHTML = '<tr><td colspan="' + kolom + '"><div class="teks-memuat kerangka kerangka-tabel" role="status" aria-label="Memuat">' + baris + baris + baris + baris + '</div></td></tr>';
 }
 
 function muatTabel(tabel, paksa) {
@@ -1601,7 +1615,7 @@ function renderM12() {
 
 async function simpanPenggunaForm(form) {
   const data = Object.fromEntries(new FormData(form));
-  if (!data.ID && (!data.Password || data.Password.length < 8)) throw new Error('Password awal minimal 8 karakter.');
+  if (!data.ID && (!data.Password || data.Password.length < 6)) throw new Error('Password awal minimal 6 karakter.');
   const hasil = await panggil('simpanPengguna', data);
   upsert('Pengguna', hasil);
   tutupModal('modal-form');
